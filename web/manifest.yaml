@@ -35,16 +35,16 @@ metadata:
     tier: web
     project: roboshop
 spec:
-    type: LoadBalancer
-    selector:
-    # you should provide pod labels here
-      app: web
-      tier: web
-      project: roboshop
-    ports:
-    - name: web-port
-      protocol: TCP
-      # service port
-      port: 80
-      # pod port
-      targetPort: 80
+  type: LoadBalancer
+  selector:
+  # you should provide pod labels here
+    app: web
+    tier: web
+    project: roboshop
+  ports:
+  - name: web-port
+    protocol: TCP
+    # service port
+    port: 80
+    # pod port
+    targetPort: 80
