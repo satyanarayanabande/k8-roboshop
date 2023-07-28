@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: user
-        image: satyanarayana5555 user:v1
+        image: satyanarayana5555/user:v1
 ---
 apiVersion: v1
 kind: Service
