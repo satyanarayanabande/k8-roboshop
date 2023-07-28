@@ -60,4 +60,4 @@ spec:
     # service port
     port: 3306
     # pod port
-      targetPort: 3306
+    argetPort: 3306
