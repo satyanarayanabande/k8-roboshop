@@ -34,7 +34,7 @@ spec:
         image: satyanarayana5555/cart:v1
         envFrom:
         - configMapRef:
-            name: config-test
+            name: cart-config
 ---
 apiVersion: v1
 kind: Service
