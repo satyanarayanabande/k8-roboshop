@@ -1,47 +1,47 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user
+  name: catalogue
   namespace: roboshop
   labels:
-    app: user
+    app: catalogue
     tier: app
     project: roboshop
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user
+      app: catalogue
       tier: app
       project: roboshop
   template:
     metadata:
       labels:
-        app: user
+        app: catalogue
         tier: app
         project: roboshop
     spec:
       containers:
-      - name: user
-        image: satyanarayana5555 user:v1
+      - name: catalogue
+        image: satyanarayana5555 catalogue:v1
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: user
+  name: catalogue
   namespace: roboshop
   labels:
-    app: user
+    app: catalogue
     tier: app
     project: roboshop
 spec:
     selector:
     # you should provide pod labels here
-      app: user
+      app: catalogue
       tier: app
       project: roboshop
     ports:
-    - name: user-port
+    - name: catalogue-port
       protocol: TCP
       # service port
       port: 8080
