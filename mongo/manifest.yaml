@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monodb
+  namespace: roboshop
+  labels:
+    app: mongodb
+    tier: DB
+    project: roboshop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+      tier: DB
+      project: roboshop
+  template:
+    metadata:
+      labels:
+        app: mongodb
+        tier: DB
+        project: roboshop
+    spec:
+      containers:
+      - name: mongodb
+        image: satyanarayana5555/mongo:v1
