@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: satyanarayana5555/mongo:v1.
+        image: satyanarayana5555/mongo:v1
 ---
 apiVersion: v1
 kind: Service
