@@ -23,6 +23,7 @@ spec:
     spec:
       containers:
       - name: web
+        imagePullPolicy: Always
         image: satyanarayana5555/web:v1
 ---
 apiVersion: v1
